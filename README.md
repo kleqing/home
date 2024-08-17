@@ -82,7 +82,7 @@ yarn preview
 
 > 构建完成后，静态资源会在 **`dist` 目录** 中生成，你可以将 **`dist` 目录中的文件**上传至服务器
 
-> 其中关于宝塔如何部署的（https://cloud.tencent.com/developer/article/1977167）
+> 其中关于宝塔如何部署的（[https://cloud.tencent.com/developer/article/1977167](https://cloud.tencent.com/developer/article/1977167)）
 
 ## 个性化
 
