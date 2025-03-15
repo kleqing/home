@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import config from '/_config.json'
+import config from '/_config.yaml'
 
 const exp = ref(config.exp)
 const nextExp = ref(config.nextExp)

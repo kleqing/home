@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import config from '/_config.json'
+import config from '/_config.yaml'
 import { Icon } from '@arco-design/web-vue'
 
 const IconFont = Icon.addFromIconFontCn({
@@ -20,7 +20,12 @@ setInterval(() => {
 <template>
   <div class="footer">
     <div class="project-box">
-      <a v-for="site in config.dock" :key="site.name" :href="site.href" class="project css-cursor-hover-enabled">
+      <a
+        v-for="site in config.dock"
+        :key="site.name"
+        :href="site.href"
+        class="project css-cursor-hover-enabled"
+      >
         <img v-if="site.imgSrc" :src="site.imgSrc" alt="" />
         <icon-font v-if="site.iconfont" :type="site.iconfont" />
         <span>{{ site.name }}</span>

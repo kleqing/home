@@ -1,5 +1,9 @@
 import { fileURLToPath, URL } from 'node:url'
 
+import { load } from 'js-yaml'
+import fs from 'fs'
+const config = load(fs.readFileSync('_config.yaml', 'utf8'))
+
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
@@ -7,8 +11,8 @@ import viteCompression from 'vite-plugin-compression'
 import viteImagemin from 'vite-plugin-imagemin'
 import { VitePWA } from 'vite-plugin-pwa'
 import { createHtmlPlugin } from 'vite-plugin-html'
-import config from './_config.json'
 import Font from 'vite-plugin-font'
+import yaml from '@rollup/plugin-yaml'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -20,7 +24,7 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            return id.toString().split('node_modules/')[1].split('/')[0].toString();
+            return id.toString().split('node_modules/')[1].split('/')[0].toString()
           }
         }
       }
@@ -58,7 +62,7 @@ export default defineConfig({
       },
       pngquant: {
         quality: [0.9, 1],
-        speed: 4,
+        speed: 4
       },
       svgo: {
         plugins: [
@@ -99,7 +103,8 @@ export default defineConfig({
     }),
     viteCompression({
       threshold: 10240 // the unit is Bytes
-    })
+    }),
+    yaml()
   ],
   resolve: {
     alias: {

@@ -1,7 +1,7 @@
 <script setup>
 import { Modal } from '@arco-design/web-vue'
 import { h, ref } from 'vue'
-import config from '/_config.json'
+import config from '/_config.yaml'
 const emit = defineEmits(['switch'])
 const props = defineProps(['l2dOnly'])
 
