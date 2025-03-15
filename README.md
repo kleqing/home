@@ -33,7 +33,8 @@
 - [Vue](https://cn.vuejs.org/)
 - [Vite](https://vitejs.cn/vite3-cn/)
 - [Arco Design](https://arco.design/)
-- [pixi-spine](https://github.com/pixijs/spine)
+- [PIXIjs](https://github.com/pixijs/pixijs)
+- [spine-pixi-v7](https://www.npmjs.com/package/@esotericsoftware/spine-pixi-v7)
 - [Iconfont](https://www.iconfont.cn/)
 - [cn-font-split](https://github.com/KonghaYao/cn-font-split)
 
