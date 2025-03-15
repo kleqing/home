@@ -1,12 +1,13 @@
 <script setup>
-import { Spine } from 'pixi-spine'
+import { Spine } from '@esotericsoftware/spine-pixi-v7'
 import * as PIXI from 'pixi.js'
 import { studentsL2D, bgmName } from '@/main'
 import { sound } from '@pixi/sound'
 
 const props = defineProps(['l2dOnly'])
 
-let animation, id = 0
+let animation,
+  id = 0
 
 const l2d = new PIXI.Application({
   width: 2560,
@@ -16,7 +17,7 @@ const l2d = new PIXI.Application({
 
 document.querySelector('#background').appendChild(l2d.view)
 
-const setL2D = (num) => {
+const setL2D = async (num) => {
   sound.stopAll()
   l2d.stage.removeChild(animation)
   switch (num) {
@@ -29,16 +30,14 @@ const setL2D = (num) => {
     default:
       id = num
   }
-  animation = new Spine(studentsL2D[id].spineData)
+  animation = Spine.from('skeleton' + id, 'atlas' + id)
   l2d.stage.addChild(animation)
-  if (animation.state.hasAnimation('Idle_01')) {
-    animation.scale.set(.85)
-    animation.state.setAnimation(0, 'Idle_01', true)
-    animation.state.timeScale = 1
-    animation.autoUpdate = true
-    animation.y = 1440
-    animation.x = 2560 / 2
-  }
+  animation.scale.set(0.85)
+  animation.state.setAnimation(0, 'Idle_01', true)
+  animation.state.timeScale = 0.6
+  animation.autoUpdate = true
+  animation.y = 1440
+  animation.x = 2560 / 2
   sound.play(bgmName[id])
 }
 

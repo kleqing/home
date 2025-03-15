@@ -1,8 +1,6 @@
 import './assets/index.css'
 import '@arco-design/web-vue/dist/arco.css'
 
-import 'pixi-spine' // Do this once at the very start of your code. This registers the loader!
-
 import { createApp } from 'vue'
 import { Modal } from '@arco-design/web-vue'
 import ArcoVue from '@arco-design/web-vue'
@@ -10,8 +8,8 @@ import ArcoVueIcon from '@arco-design/web-vue/es/icon'
 import App from './App.vue'
 import { registerSW } from 'virtual:pwa-register'
 
-import { css } from './assets/font/BlueakaBeta2GBK-DemiBold.ttf';
-import { css as css2 } from './assets/font/BlueakaBeta2GBK-Bold.ttf';
+import { css } from './assets/font/BlueakaBeta2GBK-DemiBold.ttf'
+import { css as css2 } from './assets/font/BlueakaBeta2GBK-Bold.ttf'
 // console.log(css.family, css.weight);
 // console.log(css2.family, css2.weight);
 
@@ -59,24 +57,30 @@ import * as PIXI from 'pixi.js'
 import { sound } from '@pixi/sound'
 
 // 这里是学生的l2d载入位置，想要修改自己喜欢的学生可以改这里
-import hina_swimsuit from '/l2d/hina_swimsuit/CH0063_home.skel?url'
+const hina_swimsuit = '/l2d/hina_swimsuit/CH0063_home'
+const aris = '/l2d/aris/Aris_home'
+const midori = '/l2d/midori/Midori_home'
+
 import hina_bgm from '/l2d/hina_swimsuit/Theme_21.mp3'
-import aris from '/l2d/aris/Aris_home.skel?url'
 import aris_bgm from '/l2d/aris/Someday_-sometime.mp3'
 /*
  * students 是学生l2d的位置
  * l2dBGM 是学生背景音乐的位置
  * */
-const students = [hina_swimsuit, aris]
-const l2dBGM = [hina_bgm, aris_bgm]
+const students = [hina_swimsuit, aris, midori]
+const l2dBGM = [hina_bgm, aris_bgm, aris_bgm]
 /*——————————————————————————————————————————————————*/
-export let studentsL2D = []
+
 export let bgmName = []
 
 // 加载大厅L2D文件
 ;(async function () {
+  let a = 0
   for (let i of students) {
-    studentsL2D.push(await PIXI.Assets.load(i))
+    PIXI.Assets.add({ alias: 'skeleton' + a, src: `${i}.skel` })
+    PIXI.Assets.add({ alias: 'atlas' + a, src: `${i}.atlas` })
+    await PIXI.Assets.load(['skeleton' + a, 'atlas' + a])
+    a++
   }
   for (let i of l2dBGM) {
     sound.add(i.split('/').pop().split('.')[0], {

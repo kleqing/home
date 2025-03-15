@@ -13,16 +13,21 @@
     "bin-wrapper": "npm:bin-wrapper-china"
   },
   "dependencies": {
+    "@esotericsoftware/spine-pixi-v7": "^4.2.76",
     "@pixi/sound": "^5.2.2",
-    "axios": "^1.5.0",
+    "autoprefixer": "^10.4.20",
+    "axios": "^1.7.4",
     "nprogress": "^0.2.0",
-    "pixi-spine": "^4.0.4",
-    "pixi.js": "^7.3.2",
+    "pixi.js": "^7.4.3",
+    "postcss": "^8.4.41",
+    "postcss-import": "^16.1.0",
+    "postcss-loader": "^8.1.1",
+    "postcss-px-to-viewport": "^1.1.1",
     "rollup-plugin-copy": "^3.5.0",
     "vite-plugin-font": "^2.1.5",
     "vite-plugin-pwa": "^0.16.5",
     "vue": "^3.3.4",
-    "vue-i18n": "^9.4.1",
+    "vue-i18n": "^10.0.5",
     "vue-router": "^4.2.4"
   },
   "devDependencies": {
@@ -34,7 +39,7 @@
     "eslint": "^8.49.0",
     "eslint-plugin-vue": "^9.17.0",
     "prettier": "^3.0.3",
-    "vite": "^4.4.9",
+    "vite": "^5.4.6",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-html": "^3.2.0",
     "vite-plugin-imagemin": "^0.6.1"
