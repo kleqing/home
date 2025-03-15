@@ -1,7 +1,7 @@
 <script setup>
 import { Spine } from '@esotericsoftware/spine-pixi-v7'
 import * as PIXI from 'pixi.js'
-import { studentsL2D, bgmName } from '@/main'
+import { bgmName, students } from '@/main'
 import { sound } from '@pixi/sound'
 
 const props = defineProps(['l2dOnly'])
@@ -22,10 +22,10 @@ const setL2D = async (num) => {
   l2d.stage.removeChild(animation)
   switch (num) {
     case '-':
-      id = id === 0 ? studentsL2D.length - 1 : id - 1
+      id = id === 0 ? students.length - 1 : id - 1
       break
     case '+':
-      id = id === studentsL2D.length - 1 ? 0 : id + 1
+      id = id === students.length - 1 ? 0 : id + 1
       break
     default:
       id = num

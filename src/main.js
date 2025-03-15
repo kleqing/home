@@ -59,7 +59,6 @@ import { sound } from '@pixi/sound'
 // 这里是学生的l2d载入位置，想要修改自己喜欢的学生可以改这里
 const hina_swimsuit = '/l2d/hina_swimsuit/CH0063_home'
 const aris = '/l2d/aris/Aris_home'
-const midori = '/l2d/midori/Midori_home'
 
 import hina_bgm from '/l2d/hina_swimsuit/Theme_21.mp3'
 import aris_bgm from '/l2d/aris/Someday_-sometime.mp3'
@@ -67,8 +66,8 @@ import aris_bgm from '/l2d/aris/Someday_-sometime.mp3'
  * students 是学生l2d的位置
  * l2dBGM 是学生背景音乐的位置
  * */
-const students = [hina_swimsuit, aris, midori]
-const l2dBGM = [hina_bgm, aris_bgm, aris_bgm]
+export const students = [hina_swimsuit, aris]
+const l2dBGM = [hina_bgm, aris_bgm]
 /*——————————————————————————————————————————————————*/
 
 export let bgmName = []
