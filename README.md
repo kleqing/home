@@ -7,9 +7,7 @@
 
 <div align="center">有关小鱼的《蔚蓝档案》风格的个人主页</div>
 
-<p align="center">
-  <img src='shots/main.png' alt='小鱼档案' />
-</p>
+![小鱼档案](shots/main.png)
 
 ## 预览链接
 
