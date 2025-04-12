@@ -13,15 +13,15 @@ const skip = () => {
     curtain.value = true
     setTimeout(() => {
       window.open(config.task.href)
-    }, 1000)
+    }, 300)
     setTimeout(
       () => {
-        curtain.value = false
         bg.value = false
+        curtain.value = false
       },
-      Math.floor(Math.random() * 2 + 4) * 500
+      Math.floor(Math.random() * 2 + 4) * 250
     )
-  }, 1000)
+  }, 700)
 }
 </script>
 
@@ -35,9 +35,13 @@ const skip = () => {
     ></div>
   </transition>
   <transition name="curtain">
-    <video v-if="bg" autoplay src="/transfrom.webm" class="bg"></video>
+    <div v-if="bg" class="video-container">
+      <video autoplay muted playsinline>
+        <source src="/transfrom.webm" type="video/webm" />
+        Your browser does not support WebM video.
+      </video>
+    </div>
   </transition>
-
   <transition name="curtain">
     <div v-if="curtain" class="curtain">
       <img src="/shitim/Tran_Shitim_Icon.png" alt="" />
@@ -46,11 +50,25 @@ const skip = () => {
 </template>
 
 <style scoped>
-.bg {
-  position: absolute;
+/* 全屏容器 */
+.video-container {
+  position: fixed;
   top: 0;
   left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 20;
+}
+
+/* 视频元素（关键：object-fit: cover + min-width/min-height） */
+.video-container video {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover; /* 关键属性：填充容器并裁剪多余部分 */
 }
 
 .curtain {
@@ -114,14 +132,6 @@ const skip = () => {
   transform: scale(0.9);
 }
 
-.curtain-enter-from {
-  opacity: 0;
-}
-
-.curtain-enter-to {
-  opacity: 1;
-}
-
 .curtain-leave-to {
   transform: scaleY(0%);
 }
@@ -130,8 +140,7 @@ const skip = () => {
   transform: scaleY(100%);
 }
 
-.curtain-leave-active,
-.curtain-enter-active {
+.curtain-leave-active {
   transition:
     opacity 0.1s ease-in-out,
     transform 0.25s ease-in-out;
