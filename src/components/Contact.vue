@@ -74,4 +74,11 @@ const IconFont = Icon.addFromIconFontCn({
 .contact:active {
   transform: scale(0.9);
 }
+
+@media screen and (max-width: 495px) {
+  .contact-box {
+    grid-template-columns: repeat(2, 100px);
+    grid-gap: 20px;
+  }
+}
 </style>

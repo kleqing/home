@@ -16,7 +16,7 @@ const songlist = [
 ]
 
 const checkScreenSize = () => {
-  isMiniMode.value = window.innerWidth < 768 // 768px as breakpoint
+  isMiniMode.value = window.innerWidth <= 768 // 768px as breakpoint
   if (isMiniMode.value) {
     ap.value.setMode('mini')
   } else {

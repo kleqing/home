@@ -66,7 +66,7 @@ img {
   width: 32px;
   height: auto;
   animation: move 2s ease-in-out infinite;
-  z-index: 9;
+  z-index: 9999;
 }
 
 img:last-child {
