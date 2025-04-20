@@ -12,7 +12,7 @@ const skip = () => {
   setTimeout(() => {
     curtain.value = true
     setTimeout(() => {
-      window.open(config.task.href)
+      // window.open(config.task.href)
     }, 300)
     setTimeout(
       () => {
@@ -61,7 +61,7 @@ const skip = () => {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 20;
+  z-index: 20000;
 }
 
 /* 视频元素（关键：object-fit: cover + min-width/min-height） */
@@ -79,7 +79,7 @@ const skip = () => {
   height: 100%;
   background: url('/shitim/Event_Main_Stage_Bg.png') center;
   background-size: cover;
-  z-index: 10;
+  z-index: 10000;
   display: flex;
   align-items: center;
   justify-content: center;
