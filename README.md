@@ -35,6 +35,7 @@
 - [spine-pixi-v7](https://www.npmjs.com/package/@esotericsoftware/spine-pixi-v7)
 - [Iconfont](https://www.iconfont.cn/)
 - [cn-font-split](https://github.com/KonghaYao/cn-font-split)
+- [APlayer](https://aplayer.js.org/#/)
 
 ## 部署方式
 
@@ -130,6 +131,9 @@ contact:
 task:
   name: 个人博客 # 任务名称
   href: 'https://blog.yzf.moe/' # 跳转地址
+banner:
+  musicID: # 音乐ID（暂时只支持网易云音乐）
+    - 2059151619
 ```
 > 修改其中相关内容，之后重新按上述方式部署即可完成修改
 
