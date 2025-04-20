@@ -7,6 +7,7 @@ import Contact from '@/components/Contact.vue'
 import Task from '@/components/Task.vue'
 import Loading from '@/components/Loading.vue'
 import Background from '@/components/Background.vue'
+import Banner from '@/components/Banner.vue'
 import { ref } from 'vue'
 
 const loading = ref(true)
@@ -49,6 +50,9 @@ const switchL2D = () => {
       <Contact v-if="!l2dOnly"></Contact>
     </transition>
     <Task :l2dOnly="l2dOnly"></Task>
+    <transition name="left">
+      <Banner v-show="!l2dOnly"></Banner>
+    </transition>
     <transition name="down">
       <Footer v-if="!l2dOnly"></Footer>
     </transition>

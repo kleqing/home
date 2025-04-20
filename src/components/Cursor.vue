@@ -59,8 +59,11 @@ window.document.body.onmouseover = function (event) {
     el.tagName === 'A' ||
     el.tagName === 'BUTTON' ||
     el.classList.contains('css-cursor-hover-enabled') ||
+    el.classList.contains('aplayer-button') ||
     el.parentElement.classList.contains('css-cursor-hover-enabled') ||
-    el.parentElement.parentElement.classList.contains('css-cursor-hover-enabled')
+    el.parentElement.classList.contains('aplayer-button') ||
+    el.parentElement.parentElement.classList.contains('css-cursor-hover-enabled') ||
+    el.parentElement.parentElement.classList.contains('aplayer-button')
   ) {
     document.querySelector('#cursor').classList.add('hover')
   } else {

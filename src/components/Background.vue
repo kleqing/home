@@ -1,7 +1,7 @@
 <script setup>
 import { Spine } from '@esotericsoftware/spine-pixi-v7'
 import * as PIXI from 'pixi.js'
-import { bgmName, students } from '@/main'
+import { students } from '@/main'
 import { sound } from '@pixi/sound'
 
 const props = defineProps(['l2dOnly'])
@@ -38,7 +38,6 @@ const setL2D = async (num) => {
   animation.autoUpdate = true
   animation.y = 1440
   animation.x = 2560 / 2
-  sound.play(bgmName[id])
 }
 
 setL2D(id)
