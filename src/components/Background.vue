@@ -2,7 +2,6 @@
 import { Spine } from '@esotericsoftware/spine-pixi-v7'
 import * as PIXI from 'pixi.js'
 import { students } from '@/main'
-import { sound } from '@pixi/sound'
 
 const props = defineProps(['l2dOnly'])
 
@@ -18,7 +17,6 @@ const l2d = new PIXI.Application({
 document.querySelector('#background').appendChild(l2d.view)
 
 const setL2D = async (num) => {
-  sound.stopAll()
   l2d.stage.removeChild(animation)
   switch (num) {
     case '-':
