@@ -3,17 +3,14 @@ import { ref, onMounted, onBeforeUnmount } from 'vue'
 import axios from 'axios'
 import 'APlayer/dist/APlayer.min.css'
 import APlayer from 'APlayer'
+import config from '/_config.yaml'
 
 const ap = ref(null)
 const songTimes = ref(0)
 const songName = ref('')
 const isMiniMode = ref(false)
 
-const songlist = [
-  2059151619, 2098476758, 2630220461, 2630217054, 2630217057, 2099308172, 2098477269, 2098478097,
-  2098478355, 2098473565, 2098473572, 2008994667, 1840401436, 2029212574, 2612747239, 2140425047,
-  1832392174
-]
+const songlist = config.banner.musicID
 
 const checkScreenSize = () => {
   isMiniMode.value = window.innerWidth <= 768 // 768px as breakpoint
