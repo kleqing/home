@@ -12,7 +12,7 @@ const skip = () => {
   setTimeout(() => {
     curtain.value = true
     setTimeout(() => {
-      // window.open(config.task.href)
+      window.open(config.task.href)
     }, 300)
     setTimeout(
       () => {
