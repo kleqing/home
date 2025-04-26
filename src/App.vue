@@ -7,12 +7,11 @@ import Contact from '@/components/Contact.vue'
 import Task from '@/components/Task.vue'
 import Loading from '@/components/Loading.vue'
 import Background from '@/components/Background.vue'
-import Banner from '@/components/Banner.vue'
 import { ref } from 'vue'
 
 const loading = ref(true)
 const percent = ref(1)
-const l2dOnly = ref(false)
+const l2dOnly = ref(true)
 
 import NProgress from 'nprogress'
 
@@ -20,7 +19,7 @@ NProgress.start()
 
 const load = setInterval(() => {
   percent.value = NProgress.status
-  if (document.readyState === 'complete' && window.l2d_complete === true) {
+  if (document.readyState === 'complete' && window.loadComplete === true) {
     NProgress.done()
     percent.value = 1
     setTimeout(() => {
@@ -41,7 +40,9 @@ const switchL2D = () => {
   </transition>
   <div id="background"></div>
   <main v-if="!loading">
-    <Background :l2dOnly="l2dOnly"></Background>
+    <Suspense>
+      <Background :l2dOnly="l2dOnly" @update:changeL2D="l2dOnly = $event"></Background>
+    </Suspense>
     <transition name="up">
       <Level v-if="!l2dOnly"></Level>
     </transition>
@@ -50,9 +51,6 @@ const switchL2D = () => {
       <Contact v-if="!l2dOnly"></Contact>
     </transition>
     <Task :l2dOnly="l2dOnly"></Task>
-    <transition name="left">
-      <Banner v-show="!l2dOnly"></Banner>
-    </transition>
     <transition name="down">
       <Footer v-if="!l2dOnly"></Footer>
     </transition>
@@ -65,6 +63,12 @@ const switchL2D = () => {
 main {
   display: flex;
   flex-direction: column;
+}
+
+#app:has(.rotate-notification) main,
+#app:has(.rotate-notification) #background,
+#app:has(.rotate-notification) .loading_wrapper {
+  display: none;
 }
 
 .loading-leave-to {
@@ -158,4 +162,50 @@ main {
   justify-content: center;
   overflow: hidden;
 }
+</style>
+
+<style>
+main, .arco-overlay, .loading_wrapper {
+  zoom: 0.4;
+}
+
+@media only screen and (min-width: 650px) and (min-height: 330px) {
+  main, .arco-overlay, .loading_wrapper {
+    zoom: 0.5;
+  }
+}
+
+@media only screen and (min-width: 700px) and (min-height: 350px) {
+  main, .arco-overlay, .loading_wrapper {
+    zoom: 0.6;
+  }
+}
+
+@media only screen and (min-width: 850px) and (min-height: 375px) {
+  main, .arco-overlay, .loading_wrapper {
+    zoom: 0.7;
+  }
+}
+
+@media only screen and (min-width: 950px) and (min-height: 400px) {
+  main, .arco-overlay, .loading_wrapper {
+    zoom: 0.8;
+  }
+}
+
+@media only screen and (min-width: 1060px) and (min-height: 500px) {
+  main, .arco-overlay, .loading_wrapper {
+    zoom: 0.9;
+  }
+}
+
+@media only screen and (min-width: 1175px) and (min-height: 700px) {
+  main, .arco-overlay, .loading_wrapper {
+    zoom: 1;
+  }
+}
+
+.arco-modal-body:has(.id-card) {
+    max-width: unset !important;
+  }
 </style>

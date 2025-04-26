@@ -1,0 +1,49 @@
+{
+  "author": "kleqing",
+  "level": 89,
+  "exp": 18922,
+  "nextExp": 26670,
+  "dock": [
+    {
+      "name": "RytuneX",
+      "href": "https://github.com/rayenghanmi/RyTuneX",
+      "imgSrc": "./project/rytunex.png"
+    },
+    {
+      "name": "Tap",
+      "href": "https://github.com/kleqing/Tap",
+      "imgSrc": "./project/tap.png"
+    },
+    {
+      "name": "Yaagl",
+      "href": "https://github.com/yaagl/yet-another-anime-game-launcher",
+      "imgSrc": "./project/yaagl.png"
+    }
+  ],
+  "contact": [
+    {
+      "name": "Discord",
+      "href": "https://discordapp.com/users/847029283180511283",
+      "imgSrc": "./social/discord.svg"
+    },
+    {
+      "name": "Youtube",
+      "href": "https://www.youtube.com/@kleqing",
+      "imgSrc": "./social/youtube.svg"
+    },
+    {
+      "name": "Facebook",
+      "href": "https://www.facebook.com/kleqing/",
+      "imgSrc": "./social/facebook.svg"
+    },
+    {
+      "name": "X",
+      "href": "https://x.com/kleqing24k",
+      "imgSrc": "./social/x.svg"
+    }
+  ],
+  "task": {
+    "name": "Mail me!",
+    "href": "mailto:nhanpk28122004@gmail.com"
+  }
+}

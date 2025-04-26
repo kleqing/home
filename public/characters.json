@@ -1,0 +1,207 @@
+{
+    "fixed": [
+        {
+            "name": "Misaka_Mikoto",
+            "path": "characters/MisakaMikoto/",
+            "skel": "CH9998_home.skel",
+            "atlas": "CH9998_home.atlas",
+            "bgm": "Mitsukiyo - Guruguru Usagi.mp3",
+            "scale": 0.6,
+            "x": 900,
+            "y": 1280
+        },
+        {
+            "name": "Shokuhou_Misaki",
+            "path": "characters/ShokuhouMisaki/",
+            "skel": "CH9997_home.skel",
+            "atlas": "CH9997_home.atlas",
+            "bgm": "KARUT - Poppin' Memories.mp3",
+            "scale": 0.6,
+            "x": 900,
+            "y": 1280
+        },
+        {
+            "name": "Saten_Ruiko",
+            "path": "characters/SatenRuiko/",
+            "skel": "CH9996_home.skel",
+            "atlas": "CH0996_home.atlas",
+            "bgm": "Mitsukiyo - Irasshaimase.mp3",
+            "scale": 0.6,
+            "x": 900,
+            "y": 1280
+        },
+        {
+            "name": "Rei",
+            "path": "characters/Rei/",
+            "skel": "CH0245_home.skel",
+            "atlas": "CH0245_home.atlas",
+            "bgm": "Theme_263.ogg",
+            "scale": 0.58,
+            "x": 960,
+            "y": 1280
+        },
+        {
+            "name": "Hoshino_Swimsuit",
+            "path": "characters/S.Hoshino/",
+            "skel": "Hoshino_swimsuit_home.skel",
+            "atlas": "Hoshino_swimsuit_home.atlas",
+            "bgm": "Mitsukiyo - Dive into Summer.mp3",
+            "scale": 0.6,
+            "x": 900,
+            "y": 1280
+        }
+    ],
+    "random": [
+        {
+            "name": "Hatsune_Miku",
+            "path": "characters/HatsuneMiku/",
+            "skel": "CH9999_home.skel",
+            "atlas": "CH9999_home.atlas",
+            "bgm": "BlueNewWorld_Lobby.ogg",
+            "scale": 0.6,
+            "x": 900,
+            "y": 1280
+        },
+        {
+            "name": "Hikari",
+            "path": "characters/Hikari/",
+            "skel": "CH0242_home.skel",
+            "atlas": "CH0242_home.atlas",
+            "bgm": "Theme_266.ogg",
+            "scale": 0.58,
+            "x": 960,
+            "y": 1280
+        },
+        {
+            "name": "Mari_Idol",
+            "path": "characters/I.Mari/",
+            "skel": "CH0273_home.skel",
+            "atlas": "CH0273_home.atlas",
+            "bgm": "Theme_234.ogg",
+            "scale": 0.6,
+            "x": 900,
+            "y": 1280
+        },
+        {
+            "name": "Airi_Band",
+            "path": "characters/B.Airi/",
+            "skel": "CH0251_home.skel",
+            "atlas": "CH0251_home.atlas",
+            "bgm": "Theme_222.ogg",
+            "scale": 0.65,
+            "x": 900,
+            "y": 1280
+        },
+        {
+            "name": "Momoi",
+            "path": "characters/Momoi/",
+            "skel": "Momoi_home.skel",
+            "atlas": "Momoi_home.atlas",
+            "bgm": "Nor - After the Beep.mp3",
+            "scale": 0.6,
+            "x": 900,
+            "y": 1280
+        },
+        {
+            "name": "Midori",
+            "path": "characters/Midori/",
+            "skel": "Midori_home.skel",
+            "atlas": "Midori_home.atlas",
+            "bgm": "Mitsukiyo - Koi is Love.mp3",
+            "scale": 0.65,
+            "x": 950,
+            "y": 1280
+        },
+        {
+            "name": "Momiji",
+            "path": "characters/Momiji/",
+            "skel": "momiji_home.skel",
+            "atlas": "momiji_home.atlas",
+            "bgm": "Mitsukiyo - Koi is Love.mp3",
+            "scale": 0.6,
+            "x": 900,
+            "y": 1280
+        },
+        {
+            "name": "Hina_Dress",
+            "path": "characters/D.Hina/",
+            "skel": "CH0230_home.skel",
+            "atlas": "CH0230_home.atlas",
+            "bgm": "Theme_179_Inst2.ogg",
+            "scale": 0.7,
+            "x": 900,
+            "y": 1280
+        },
+        {
+            "name": "Aris_Maid",
+            "path": "characters/M.Aris/",
+            "skel": "CH0200_home.skel",
+            "atlas": "CH0200_home.atlas",
+            "bgm": "Mitsukiyo - Koi is Love.mp3",
+            "scale": 0.6,
+            "x": 900,
+            "y": 1280
+        },
+        {
+            "name": "Shiroko_Terror",
+            "path": "characters/T.Shiroko/",
+            "skel": "CH0263_home.skel",
+            "atlas": "CH0263_home.atlas",
+            "bgm": "Theme_228.ogg",
+            "scale": 0.6,
+            "x": 900,
+            "y": 1280
+        },
+        {
+            "name": "Hoshino_Armed",
+            "path": "characters/A.Hoshino/",
+            "skel": "CH0258_home.skel",
+            "atlas": "CH0258_home.atlas",
+            "bgm": "Theme_234.ogg",
+            "scale": 0.6,
+            "x": 900,
+            "y": 1280
+        },
+        {
+            "name": "Sakurako_Idol",
+            "path": "characters/I.Sakurako/",
+            "skel": "CH0274_home.skel",
+            "atlas": "CH0274_home.atlas",
+            "bgm": "Theme_226.ogg",
+            "scale": 0.6,
+            "x": 900,
+            "y": 1280
+        },        
+        {
+            "name": "Momoi_Maid",
+            "path": "characters/M.Momoi/",
+            "skel": "CH0201_home.skel",
+            "atlas": "CH0201_home.atlas",
+            "bgm": "Theme_214.ogg",
+            "scale": 0.6,
+            "x": 1000,
+            "y": 1280
+        },
+        {
+            "name": "Midori_Maid",
+            "path": "characters/M.Midori/",
+            "skel": "CH0202_home.skel",
+            "atlas": "CH0202_home.atlas",
+            "bgm": "Theme_220.ogg",
+            "scale": 0.6,
+            "x": 900,
+            "y": 1280
+        },
+        {
+            "name": "Yuuka_Pajama",
+            "path": "characters/P.Yuuka/",
+            "skel": "CH0284_home.skel",
+            "atlas": "CH0284_home.atlas",
+            "bgm": "Theme_216.ogg",
+            "scale": 0.58,
+            "x": 960,
+            "y": 1280
+        }
+    ],
+    "randomAmount": 5
+}
