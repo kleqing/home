@@ -3,23 +3,20 @@ import { ref } from 'vue'
 
 const prop = defineProps(['percent'])
 
-const imgUrl = ref('https://webcnstatic.yostar.net/ba_cn_web/prod/web/assets/avatar2.b84283e9.png')
+const imgUrl = ref('./startup/arona_avatar_2.png')
 const imgList = [
-  'https://webcnstatic.yostar.net/ba_cn_web/prod/web/assets/avatar1.c18ce793.png',
-  'https://webcnstatic.yostar.net/ba_cn_web/prod/web/assets/avatar2.b84283e9.png',
-  'https://webcnstatic.yostar.net/ba_cn_web/prod/web/assets/avatar3.c9d108f1.png',
-  'https://webcnstatic.yostar.net/ba_cn_web/prod/web/assets/avatar4.8656c817.png'
+  './startup/arona_avatar_1.png',
+  './startup/arona_avatar_2.png',
+  './startup/arona_avatar_3.png',
+  './startup/arona_avatar_4.png'
 ]
 
 document.oncontextmenu = function () {
   return false
 }
 const options = {
-  // 动画时长
   duration: 2000,
-  // 动画前后保持的状态
   fill: 'forwards',
-  // 动画缓动类型
   easing: 'ease-in-out'
 }
 let a = 0
@@ -75,11 +72,11 @@ img {
 
 @font-face {
   font-family: TVPS-Vain-Capital-2;
-  src: url(https://webcnstatic.yostar.net/ba_cn_web/prod/web/assets/TVPS-Vain-Capital-2.cca90a05.ttf);
+  src: url(@/assets/font/TVPS-Vain-Capital-2.ttf);
 }
 
 .loading_wrapper {
-  background: url('https://webcnstatic.yostar.net/ba_cn_web/prod/web/assets/loading_bg_pc.ba246778.png')
+  background: url('/startup/loading_bg_pc.png')
     center;
   background-size: cover;
   overflow: hidden;

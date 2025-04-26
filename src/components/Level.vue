@@ -1,13 +1,15 @@
 <script setup>
-import { ref } from 'vue'
-import config from '/_config.yaml'
+import { h, ref } from 'vue'
+import config from '/config.json'
+import { Modal } from '@arco-design/web-vue'
 
 const exp = ref(config.exp)
 const nextExp = ref(config.nextExp)
+
 </script>
 
 <template>
-  <div class="level-box">
+  <div class="level-box css-cursor-hover-enabled">
     <div class="container">
       <div class="level css-cursor-hover-enabled">
         <span>Lv.</span>

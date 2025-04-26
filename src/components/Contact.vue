@@ -1,10 +1,8 @@
 <script setup>
-import { Icon } from '@arco-design/web-vue'
-import config from '/_config.yaml'
-
-const IconFont = Icon.addFromIconFontCn({
-  src: config.iconfont
-})
+import config from '/config.json'
+let pathname = window.location.pathname;
+if (!pathname.endsWith('/')) 
+    pathname += '/';
 </script>
 
 <template>
@@ -14,8 +12,7 @@ const IconFont = Icon.addFromIconFontCn({
       :href="contact.href"
       class="contact css-cursor-hover-enabled"
     >
-      <img v-if="contact.imgSrc" :src="contact.imgSrc" alt="" />
-      <icon-font v-if="contact.iconfont" :type="contact.iconfont" />
+      <img v-if="contact.imgSrc" :src="pathname + contact.imgSrc" alt="" />
       <span>{{ contact.name }}</span>
     </a>
   </div>
@@ -73,12 +70,5 @@ const IconFont = Icon.addFromIconFontCn({
 
 .contact:active {
   transform: scale(0.9);
-}
-
-@media screen and (max-width: 495px) {
-  .contact-box {
-    grid-template-columns: repeat(2, 100px);
-    grid-gap: 20px;
-  }
 }
 </style>

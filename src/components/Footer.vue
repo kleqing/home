@@ -1,11 +1,7 @@
 <script setup>
 import { ref } from 'vue'
-import config from '/_config.yaml'
-import { Icon } from '@arco-design/web-vue'
+import config from '/config.json'
 
-const IconFont = Icon.addFromIconFontCn({
-  src: config.iconfont
-})
 const time = ref(new Date().getHours() + ':' + new Date().getMinutes())
 
 const addZero = (time) => {
@@ -15,19 +11,17 @@ const addZero = (time) => {
 setInterval(() => {
   time.value = addZero(new Date().getHours()) + ':' + addZero(new Date().getMinutes())
 }, 1000)
+
+let pathname = window.location.pathname;
+if (!pathname.endsWith('/')) 
+    pathname += '/';
 </script>
 
 <template>
   <div class="footer">
     <div class="project-box">
-      <a
-        v-for="site in config.dock"
-        :key="site.name"
-        :href="site.href"
-        class="project css-cursor-hover-enabled"
-      >
-        <img v-if="site.imgSrc" :src="site.imgSrc" alt="" />
-        <icon-font v-if="site.iconfont" :type="site.iconfont" />
+      <a v-for="site in config.dock" :href="site.href" class="project css-cursor-hover-enabled">
+        <img v-if="site.imgSrc" :src="pathname + site.imgSrc" alt="" />
         <span>{{ site.name }}</span>
       </a>
     </div>
@@ -58,7 +52,7 @@ setInterval(() => {
 .footer::after {
   content: '';
   width: calc(100% - 360px);
-  height: 100%;
+  height: 60px;
   background: #ffffffdd;
   position: absolute;
   transform: skew(50deg);
@@ -76,6 +70,7 @@ setInterval(() => {
   display: inline-flex;
   align-items: flex-end;
   overflow: auto;
+  scrollbar-width: none;
 }
 
 .project-box::-webkit-scrollbar {
@@ -135,7 +130,7 @@ setInterval(() => {
   height: 64px;
 }
 
-@media screen and (max-width: 830px) {
+/* @media screen and (max-width: 830px) {
   .project-box {
     width: 100%;
     justify-content: space-evenly;
@@ -153,7 +148,7 @@ setInterval(() => {
   .project span {
     display: none;
   }
-}
+} */
 
 @media screen and (max-width: 600px) {
   .project img {
